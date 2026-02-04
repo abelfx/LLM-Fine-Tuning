@@ -1,14 +1,14 @@
 # Efficient LLM Fine-Tuning: Microsoft Phi-2 with QLoRA
 
-A professional demonstration of fine-tuning the **Microsoft Phi-2** (2.7B parameter) Large Language Model for targeted task adaptation. This project utilizes **QLoRA** (Quantized Low-Rank Adaptation) to achieve high-performance results on consumer hardware, focusing on specific **Business & IT scenarios** (Agile standups, Incident reports, HR interviews).
+A professional demonstration of fine-tuning the **Microsoft Phi-2** (1.5B parameters) Large Language Model for targeted task adaptation. This project utilizes **QLoRA** (Quantized Low-Rank Adaptation) to achieve high-performance results on consumer hardware, focusing on specific **Business & IT scenarios** (Agile standups, Incident reports, HR interviews).
 
 ## Project Highlights
 
-*   **Model:** [Microsoft Phi-2](https://huggingface.co/microsoft/phi-2) (2.7B Parameters)
+*   **Model:** [Microsoft Phi-2](https://huggingface.co/microsoft/phi-2)
 *   **Technique:** 4-bit Quantization (BitsAndBytes) + LoRA (PEFT)
 *   **Task:** Dialogue Summarization
 *   **Dataset:** Hugging Face `dialogsum` + Custom Enterprise Scenarios
-*   **Result:** Reduced training loss from **~1.67** to **~1.13**, demonstrating significant capability gains in context retention and summary conciseness.
+*   **Result:** Reduced training loss from **~1.67** to **~1.10**, demonstrating significant capability gains in context retention and summary conciseness.
 
 ## Evaluation & Metrics
 
@@ -23,7 +23,7 @@ We compared the zero-shot performance of the Base Phi-2 model against our Fine-T
 | **ROUGE-1** | **+3.98%** | Significant improvement in unigram overlap. |
 | **ROUGE-L** | **+2.72%** | Better capturing of the longest common subsequence structure. |
 | **Length Ratio**| **-22.14%** | The fine-tuned model produces more concise summaries (less verbose). |
-| **Training Loss** | **1.67 📉 1.13** | Smooth convergence over 1000 steps without overfitting artifacts. |
+| **Training Loss** | **1.67 📉 1.10** | Smooth convergence over 1000 steps without overfitting artifacts. |
 
 ### 2. Qualitative "Stress Test" (The Demo)
 We tested the model on complex logic puzzles where simple extraction fails.
